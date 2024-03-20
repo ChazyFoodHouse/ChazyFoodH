@@ -172,6 +172,65 @@ background-color: 100% 100%;
 
 
 
+<html>
+<head>
+    <title>Chazy's Food Hub</title>
+</head>
+<body>
+    <h1>Welcome to Chazy's Food Hub!</h1>
+    <p>We're glad you could visit us. Share your photos with us!</p>
+    <button id="upload-button">Upload Photos</button>
+
+    <div id="upload-section" style="display:none;">
+        <h2>Upload Your Photos</h2>
+        <p>Please select the photos you would like to upload:</p>
+        <input type="file" id="photo-file" accept="image/*" multiple>
+        <button id="submit-button">Submit</button>
+    </div>
+
+    <script>
+        // Get the button element and the upload section
+        const uploadButton = document.getElementById('upload-button');
+        const uploadSection = document.getElementById('upload-section');
+
+        // Add a click event listener to the button
+        uploadButton.addEventListener('click', () => {
+            // Toggle the display of the upload section
+            uploadSection.style.display = (uploadSection.style.display === 'none') ? 'block' : 'none';
+        });
+
+        // Get the submit button element
+        const submitButton = document.getElementById('submit-button');
+
+        // Add a click event listener to the submit button
+        submitButton.addEventListener('click', () => {
+            // Get the file(s) selected by the user
+            const photoFiles = document.getElementById('photo-file').files;
+
+            // Loop through the selected file(s)
+            for (let i = 0; i < photoFiles.length; i++) {
+                // Create a new FormData object
+                const formData = new FormData();
+
+                // Add the file to the FormData object
+                formData.append('photos', photoFiles[i]);
+
+                // Send a POST request to the server to uploadthe file
+                fetch('https://example.com/upload-photos', {
+                    method: 'POST',
+                    body: formData
+                });
+            }
+
+            // Show a success message to the user
+            alert('Photos uploaded successfully!');
+
+            // Reset the upload section and input fields
+            uploadSection.style.display = 'none';
+            document.getElementById('photo-file').value = '';
+        });
+    </script>
+</body>
 </html>
 	
 	
