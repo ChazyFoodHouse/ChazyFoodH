@@ -26,7 +26,7 @@
 </head>
 <body>
   <header>
-    <h1><center>Welcome to Chazy's Food House</center></h1>
+    <h1><strong><center>Welcome to Chazy's Food House</center></strong></h1>
   </header>
   <main>
     
@@ -54,13 +54,22 @@
     </style>
 </head>
 <body>
-    <h1>Enjoy Sizzling Meals at an Affordable price!</h1>
+<center>
+    <h1>Enjoy Sizzling Meals at an Affordable price $ ₱ </h1>
+</center>	
     <p>
+	<center>
+	<strong>
         We are a fast food restaurant that serves delicious and affordable meals. Come and visit us today!
-    </p>
+    </strong>
+	</center>
+	</p>
+	
     <button class="button" onclick="showContent('about')">About Us</button>
     <div class="content" id="about">
-        <h2>About Us</h2>
+        <center>
+		<h2>About Us</h2>
+		</center>
         <p>
             Chazy's Food House is a family-owned restaurant that has been serving the community for years.
 			We take pride in our delicious and affordable meals, and our commitment to providing excellent customer service.
@@ -121,11 +130,14 @@
     
     
     <button class="button" onclick="showContent('Menu')">Menu</button>
-    <div class="content" id="Menu">
+    
+	<div class="content" id="Menu">
         
+		<center>
         <p>
             <strong>Chazy's Food House Menu</strong>
         </p>
+		</center>
 		<style> 
 <style>
 body{
@@ -134,11 +146,13 @@ background-size: 10000px;
 background-color: 100% 100%;
 }
 </style>
+<center>
 <img src="chazy12.jpg">
-        
+</img>
+<center>        
 
         <p>
-            We are proud to be a part of the Anytown community, and we look forward to serving you and your family for many years to come.
+            We are proud to share our Best Dishes, and we look forward to serving you and your family for many years to come.
         </p>
         <p>
             <strong>The Chazy's Food House Team</strong>
@@ -159,13 +173,20 @@ background-color: 100% 100%;
     
     
     <button class="button" onclick="showContent('Location')">Location</button>
-    <div class="content" id="Location">
+    
+	<div class="content" id="Location">
 	
-	<p><strong>Chazy's Food House Location</strong></p>
+	<center>
+	<p>
+	<strong>Chazy's Food House Location</strong>
+	</p>
+	</center>
+	
+	<center>
         <p> Located at Tuble Road, Moalboal Cebu 6032
-        <p>
-            
         </p>
+    </center>        
+        
 		<style> 
 <style>
 body{
@@ -178,9 +199,9 @@ background-color: 100% 100%;
 	
     <p>We are located at Tuble Road Moalboal Cebu 6032 and are open Monday through Saturday from 9am to 10pm.</p>
     <h2>Contact Us</h2>
-    <p>Feel free to contact us with any questions or comments</p>
-	<p>via Facebook www.facebook.com/janice.d.intong</p>
-	<p>Gmail at cabigonjanice28@gmail.com</p>
+    <p>✔Feel free to contact us with any questions or comments</p>
+	<p>✔via Facebook www.facebook.com/janice.d.intong</p>
+	<p>✔Gmail at cabigonjanice28@gmail.com</p>
     <!-- Insert image here -->
     <style> 
 <style>
@@ -190,8 +211,10 @@ background-size: 10000px;
 background-color: 100% 100%;
 }
 </style>
+<center>
 <img src="chazy2.jpg">
 </img>
+</center>
   </main>
   
 </body>
@@ -204,71 +227,57 @@ background-size: 10000px;
 background-color: 100% 100%;
 }
 </style>
+<center>
 <img src="chazy11.jpg">
 </img>
+</center>
 
 
 
-	<html>
-<head>
-    <title>Chazy's Food Hub</title>
-</head>
-<body>
-    <h1>Welcome to Chazy's Food Hub!</h1>
-    <p>We're glad you could visit us. Share your photos with us!</p>
-    <button id="upload-button">Upload Photos</button>
 
-    <div id="upload-section" style="display:none;">
-        <h2>Upload Your Photos</h2>
-        <p>Please select the photos you would like to upload:</p>
-        <input type="file" id="photo-file" accept="image/*" multiple>
-        <button id="submit-button">Submit</button>
-    </div>
 
-    <script>
-        // Get the button element and the upload section
-        const uploadButton = document.getElementById('upload-button');
-        const uploadSection = document.getElementById('upload-section');
 
-        // Add a click event listener to the button
-        uploadButton.addEventListener('click', () => {
-            // Toggle the display of the upload section
-            uploadSection.style.display = (uploadSection.style.display === 'none') ? 'block' : 'none';
-        });
 
-        // Get the submit button element
-        const submitButton = document.getElementById('submit-button');
 
-        // Add a click event listener to the submit button
-        submitButton.addEventListener('click', () => {
-            // Get the file(s) selected by the user
-            const photoFiles = document.getElementById('photo-file').files;
 
-            // Loop through the selected file(s)
-            for (let i = 0; i < photoFiles.length; i++) {
-                // Create a new FormData object
-                const formData = new FormData();
 
-                // Add the file to the FormData object
-                formData.append('photos', photoFiles[i]);
 
-                // Send a POST request to the server to uploadthe file
-                fetch('https://example.com/upload-photos', {
-                    method: 'POST',
-                    body: formData
-                });
-            }
 
-            // Show a success message to the user
-            alert('Photos uploaded successfully!');
 
-            // Reset the upload section and input fields
-            uploadSection.style.display = 'none';
-            document.getElementById('photo-file').value = '';
-        });
-    </script>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <footer>
     &copy; 2024 Chazy's Food House
   </footer>
